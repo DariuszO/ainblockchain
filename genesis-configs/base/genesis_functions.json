@@ -1,0 +1,246 @@
+{
+  "checkin": {
+    "requests": {
+      "$network_name": {
+        "$chain_id": {
+          "$token_id": {
+            "$user_addr": {
+              "$checkin_id": {
+                ".function": {
+                  "_openCheckin": {
+                    "function_type": "NATIVE",
+                    "function_id": "_openCheckin"
+                  },
+                  "_cancelCheckin": {
+                    "function_type": "NATIVE",
+                    "function_id": "_cancelCheckin"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "$network_name": {
+        "$chain_id": {
+          "$token_id": {
+            "$user_addr": {
+              "$checkin_id": {
+                ".function": {
+                  "_closeCheckin": {
+                    "function_type": "NATIVE",
+                    "function_id": "_closeCheckin"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "checkout": {
+    "requests": {
+      "$network_name": {
+        "$chain_id": {
+          "$token_id": {
+            "$user_addr": {
+              "$checkout_id": {
+                ".function": {
+                  "_openCheckout": {
+                    "function_type": "NATIVE",
+                    "function_id": "_openCheckout"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "$network_name": {
+        "$chain_id": {
+          "$token_id": {
+            "$user_addr": {
+              "$checkout_id": {
+                ".function": {
+                  "_closeCheckout": {
+                    "function_type": "NATIVE",
+                    "function_id": "_closeCheckout"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "consensus": {
+    "number": {
+      "$number": {
+        "propose": {
+          ".function": {
+            "_handleOffenses": {
+              "function_type": "NATIVE",
+              "function_id": "_handleOffenses"
+            },
+            "_distributeFee": {
+              "function_type": "NATIVE",
+              "function_id": "_distributeFee"
+            }
+          }
+        }
+      }
+    }
+  },
+  "escrow": {
+    "$source_account": {
+      "$target_account": {
+        "$escrow_key": {
+          "hold": {
+            "$record_id": {
+              ".function": {
+                "_hold": {
+                  "function_type": "NATIVE",
+                  "function_id": "_hold"
+                }
+              }
+            }
+          },
+          "release": {
+            "$record_id": {
+              ".function": {
+                "_release": {
+                  "function_type": "NATIVE",
+                  "function_id": "_release"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "gas_fee": {
+    "claim": {
+      "$user_addr": {
+        "$record_id": {
+          ".function": {
+            "_claimReward": {
+              "function_type": "NATIVE",
+              "function_id": "_claimReward"
+            }
+          }
+        }
+      }
+    },
+    "collect": {
+      "$block_number": {
+        "$from": {
+          "$tx_hash": {
+            ".function": {
+              "_collectFee": {
+                "function_type": "NATIVE",
+                "function_id": "_collectFee"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "manage_app": {
+    "$app_name": {
+      "create": {
+        "$record_id": {
+          ".function": {
+            "_createApp": {
+              "function_type": "NATIVE",
+              "function_id": "_createApp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "payments": {
+    "$service_name": {
+      "$user_addr": {
+        "$payment_key": {
+          "pay": {
+            "$record_id": {
+              ".function": {
+                "_pay": {
+                  "function_type": "NATIVE",
+                  "function_id": "_pay"
+                }
+              }
+            }
+          },
+          "claim": {
+            "$record_id": {
+              ".function": {
+                "_claim": {
+                  "function_type": "NATIVE",
+                  "function_id": "_claim"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "staking": {
+    "$service_name": {
+      "$user_addr": {
+        "$staking_key": {
+          "stake": {
+            "$record_id": {
+              "value": {
+                ".function": {
+                  "_stake": {
+                    "function_type": "NATIVE",
+                    "function_id": "_stake"
+                  }
+                }
+              }
+            }
+          },
+          "unstake": {
+            "$record_id": {
+              "value": {
+                ".function": {
+                  "_unstake": {
+                    "function_type": "NATIVE",
+                    "function_id": "_unstake"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "transfer": {
+    "$from": {
+      "$to": {
+        "$key": {
+          "value": {
+            ".function": {
+              "_transfer": {
+                "function_type": "NATIVE",
+                "function_id": "_transfer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
